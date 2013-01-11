@@ -1,0 +1,626 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=1024, user-scalable=no">
+
+	<title>中間報告会</title>
+	
+	<!-- Required stylesheet -->
+	<link rel="stylesheet" href="core/deck.core.css">
+	
+	<!-- Extension CSS files go here. Remove or add as needed. -->
+	<link rel="stylesheet" href="extensions/goto/deck.goto.css">
+	<link rel="stylesheet" href="extensions/menu/deck.menu.css">
+	<link rel="stylesheet" href="extensions/navigation/deck.navigation.css">
+	<link rel="stylesheet" href="extensions/status/deck.status.css">
+	<link rel="stylesheet" href="extensions/hash/deck.hash.css">
+	<link rel="stylesheet" href="extensions/scale/deck.scale.css">
+  <link rel="stylesheet" href="css/gantt-style.css" />
+	
+
+	<!-- Style theme. More available in /themes/style/ or create your own. -->
+	<link rel="stylesheet" href="themes/style/swiss.css">
+	
+	<!-- Transition theme. More available in /themes/transition/ or create your own. -->
+	<link rel="stylesheet" href="themes/transition/horizontal-slide.css">
+	
+	<!-- Required Modernizr file -->
+	<script src="modernizr.custom.js"></script>
+	<script type="text/javascript" src="js/processing-1.4.0.min.js"></script>
+</head>
+<body class="deck-container">
+
+<!-- Begin slides. Just make elements with a class of slide. -->
+
+<section class="slide">
+	<br /><br />
+	<h2 align="center" style="font-size: 2.3em">スマートフォンへの対応に向けた<br />eポートフォリオシステムの拡張</h2>
+	<!--<h4 align="center">with アジャイルソフトウェア開発</h4>-->
+	<br /><br /><br /><br /><br />
+	   <h4>M2 佐藤隆広</h4>
+    <h4>M1 秀毛嶺維馬</h4>
+	<h4>B3 <u>○ 山本賢人</u> 梅本祥平 中野佑 菊谷悠太</h4>
+	<h4>B2 菅野久樹 佐藤祐磨 赤木勇極 阿保友也</h4>
+	<br />
+	<p align="center">2012/08/31 2012年度　前期　高度ICT演習成果発表会</p>
+
+	
+</section>
+
+<section class="slide">
+	<h2>アジェンダ</h2>
+	<ol style="font-size: 1.2em">
+	<li>背景：eポートフォリオシステム</li>
+	<li>提案：スマートフォンによる情報共有の促進</li>
+	<li>利用例</li>
+	<li>活動目的</li>
+	<li>開発技術、手法</li>
+	<li>スケジュール</li>
+	<li>前期からの学び</li>
+	</ol>
+</section>
+
+<section class="slide">
+	<h2>背景：eポートフォリオシステム</h2>
+	<table>
+		<tr>
+			<td>
+				<p>大学教育の変化により学習ポートフォリオが必要</p>
+				<p>eポートフォリオシステムとして実現される</p>
+			<ul>
+				<li>
+					学習成果物を作成・蓄積　→　振り返り
+				</li>
+				<li>
+					グループ学習で成果物を共有
+				</li>
+			</ul>
+			<p>
+				本学でも来年度に導入予定
+			</p>
+			<ul>
+				<li>
+					大学の演習で<u>未来大のプロジェクト学習向け</u>eポートフォリオシステムを開発中
+				<ul>本学のプロジェクト学習では情報共有が課題</ul>
+				</li>
+			</ul></td>
+			<td>&nbsp;</td>
+      		<td style="vertical-align: top">
+        		<img src="images/eportfolio.gif" width="580px"/>
+      		</td>
+		</tr>
+	</table>
+</section>
+
+<section class="slide">
+	<h2>提案：スマートフォンによる情報共有の促進</h2>
+	
+	<table>
+		<tr>
+			<td>
+				<ul>
+					<li>共有中の成果物の更新を即座に確認
+						<ul>
+							<li>活動に参加していなくても情報を共有できる</li>
+						</ul>
+					</li>
+					<li>短いメッセージを手軽に返信
+						<ul>
+							<li>素早いフィードバックができる</li>
+						</ul>
+					</li>
+					<li>写真や動画を簡単にアップロード
+						<ul>
+							<li>写真や動画がより多く蓄積される</li>
+						</ul>
+					</li>
+				</ul>
+			</td>
+			<td>&nbsp;</td>
+      		<td style="vertical-align: top">
+        		<img src="images/eportfolio_smart.gif" width="520px"/>
+      		</td>
+		</tr>
+	</table>
+</section>
+
+<section class="slide">
+	<h2>スマートフォンから利用する際の問題点</h2>
+	<p>PC用ユーザインタフェースをそのまま利用するのは困難</p>
+		<ul>
+			<li>画面が狭い</li>
+			<li>長文入力しにくい</li>
+		</ul>
+	<img src="images/iPhone4.png" height="400px"/>
+</section>
+
+<!--
+<section class="slide">
+	<h2>テーマ</h2>
+	
+	<p>スマートフォンへの対応に向けたeポートフォリオシステムの拡張</p>
+	<ul>
+		<li>eポートフォリオシステムとは</li>
+		<ul>
+			<li>学習活動を支援するためのシステム</li>
+		</ul>
+		<li>スマートフォンに適した機能を考える</li>
+		<ul>
+			<li>スマートフォンには様々な制約がある</li>
+		</ul>
+		<li>アジャイルソフトウェア開発の導入</li>
+		<ul>
+			<li>エクストリームプログラミングの実施</li>
+		</ul>
+	</ul>
+</section>
+
+<section class="slide">
+	<h2>eポートフォリオシステム</h2>
+	<p>学習や成長の証拠となる</p>
+	<p>学習を促進するためのツールとして活用できる</p>
+	<p>学習活動において一連のプロセスを繰り返すことで自律的な学習が生起される</p>
+		<ul>
+			<li>学習成果物を作成し、蓄積する</li>
+			<li>自己評価、相互評価を行い、その評価結果に応じて修正を行う</li>
+			<li>評価結果をもとに自身で振り返りを行い、自発的な学習の生起が期待できる</li>
+		</ul>
+	<p><font size="3pt">小川賀代, 小村道昭, 大学力を高めるeポートフォリオ〜エビデンスに基づく教育の質保証を目指して〜, 東京電機大学出版局, 2012.</font></p>
+</section>
+
+-->
+
+
+<section class="slide">
+	<h2>活動目的：eポートフォリオシステムをスマートフォン向けに拡張</h2>
+	<p>スマートフォン向けの機能</p>
+	 <ul>
+	 	<li><strong>通知機能</strong>と<strong>アップロード機能</strong>をメインにする</li>
+	 	<li>スマートフォンから使える機能を限定する</li>
+	 </ul>
+	<p>スマートフォン向けのユーザインタフェース</p>
+	 <ul>
+	 	<li>通知・検索をベースとしたナビゲーションを実装する</li>
+	 	<li>入力のフォーマットを工夫する</li>
+	 </ul>
+</section>
+
+<section class="slide">
+	<h2>通知機能：更新情報の通知</h2>
+	<p>共有している成果物が変更されると、システムから即時通知をうけられる</p>
+	<p>ユーザストーリー：　共有しているソースコードが書き換えられると、グループメンバーに通知が届く</p>
+	<img src="images/push_chart.png" />
+</section>
+
+<section class="slide">
+	<h2>アップロード機能：写真のアップロード</h2>
+	<table>
+	<p>学習成果物として使いたい写真や動画を、PCを介さずに直接アップロードする</p>
+	<p>ユーザストーリー：　ホワイトボードの写真を議事録に添付する</p>
+	<br/><br/>
+	<td>
+		<img src="images/shot_scene.gif" width="500px"/>
+	</td>
+	<td>
+		<img src="images/upload_scene.gif" width="300px" />
+	</td>
+	</table>
+</section>
+
+
+<section class="slide">
+  <h2>必要となる開発技術</h2>
+  <table>
+    <tr>
+      <td width="50%">
+          <p>スマートフォン向けのUIの実現</p>
+      </td>
+      <td width="10%" align="center" valign="middle">→</td>
+      <td>jQuery Mobile</td>
+    </tr>
+    <tr>
+    	<td>
+          <p>スマートフォンのカメラやGPSを利用</p>
+        </td>
+      <td align="center">→</td>
+      <td>HTML5 DeviceAPI</td>
+    </tr>   
+   </table>
+   <table>
+   	<td>
+   	</br>
+   	</br>
+   	</br>
+   		<img src="images/hikaku.gif" width="650px"/>
+   	</td>
+   	<td>
+   		<p>　　</p>
+   	</td>
+   	<td>
+   		<img src="images/login_sample.png" width="250px"/>
+   	</td>
+   </tr>
+  </table>	
+</section>
+
+<section class="slide">
+  <h2>採用した開発手法</h2>
+   <table style="border: 0px solid #000">
+    <tr>
+      <td width="10%">
+          <p>仕様が定まっていない</p>
+      </td>
+      <td width="5%" align="center" valign="middle">→</td>
+      <td width="40%">
+      	<p>繰り返し型開発</p>
+      	<ul>
+      		<li>バージョン管理(GitHub)</li>
+      			<ul>
+      				<p>変更履歴を管理することで複数人の開発をサポートする</p>
+      			</ul>
+      		<li>回帰テスト(SeleniumIDE)</li>
+      			<ul>
+      				<p>Webアプリケーションのテストの自動化ツール</p>
+      			</ul>
+      	</ul>
+      </td>
+    </tr>
+   </table>
+   <hr style="margin: 0px; color: #000;" size="5"/>
+   <table style="border: 0px solid #000">
+    <tr>
+    	<td width="10%">
+          <p>知識の共有</p>
+        </td>
+      <td width="5%" align="center" valign="middle">→</td>
+      <td width="40%">
+      	<ul>
+      	<li>ペアプログラミング
+      		<ul>
+      			<li>学習効果、モチベーションの維持、品質の向上</li>
+      		</ul>
+      	</li>
+      	<li>勉強会
+      	<ul>
+      		<li>GitHub</li>
+      		<li>Ruby</li>
+      		<li>jQuery Mobile, HTML5 Canvas</li>
+      	</ul>
+      	</li>
+      	</ul>
+      </td>
+    </tr>
+   </table>
+</section>
+
+
+<section class="slide">
+	<h2>スケジュール</h2>
+	
+  <div>
+  	<canvas data-processing-sources="js/schedule.pjs" id="schedule"  width="821" height="371"></canvas>  	
+  </div>  
+</section>
+
+<section class="slide">
+	<h2>前期の活動の成果</h2>
+	<table>
+		<tr>
+			<td width="30%" align="right">
+				<p>環境構築</p>
+			</td>
+			<td>
+				<ul>
+					<li>GitHub, SeleniumIDE, Aptana Studio 3</li>
+				</ul>
+			</td>
+		</tr>
+		<tr>
+			<td align="right">
+				<p>SeleniumIDEの学習</p>
+			</td>
+			<td>
+				<ul>
+					<li>SeleniumIDEを用いてブラウザ上でテスト内容を記録し、Rubyのテストコードの生成方法を学習</li>
+					<li>生成したテストコードをjQueryMobileのWebページに対して実行できることを確認</li>
+				</ul>
+			</td>
+		</tr>
+		<tr>
+			<td align="right">
+				<p>GitHubの学習</p>
+			</td>
+			<td>
+				<ul>
+					<li>サンプルプロジェクトを作って、共同編集</li>
+				</ul>
+			</td>
+		</tr>
+		<tr>
+			<td align="right">
+				<p>Rubyの学習</p>
+			</td>
+			<td>
+				<ul>
+					<li>基本的な文法</li>
+				</ul>
+			</td>
+		</tr>
+		<tr>
+			<td align="right">
+				<p>HTML5の学習</p>
+			</td>
+			<td>
+				<ul>
+					<li>jQuery Mobileを用いたログイン画面の作成</li>
+					<li>Canvasを使ったJavaScriptの学習</li>
+				</ul>
+			</td>
+		</tr>
+		<tr>
+			<td align="right">
+				<p>仕様検討</p>
+			</td>
+			<td>
+				<ul>
+					<li>スマートフォン向けの機能、UIの検討</li>
+					<li>採用技術の検討</li>
+				</ul>
+			</td>
+		</tr>
+	</table>
+	<!--
+	<p>バージョン管理の方法<p>
+		<ul>
+			<li>Git,GitHubの使い方の習得</li>
+		</ul>
+	<p>Rubyの基本的な文法の勉強会</p>
+	    <ul>
+			<li>Rubyの動的型付け、クラス定義の方法</li>
+		</ul>
+	<p>SeleniumIDEの使い方</p>
+	　　　<ul>
+			<li>SeleniumIDEを用いてブラウザ上でテスト内容を記録し、Rubyのテストコードの生成方法を学習</li>
+			<li>生成したテストコードをjQueryMobileのwebページに対して実行できることを確認した</li>
+		</ul>
+	-->
+</section>
+
+<section class="slide">
+	<h2>スケジュール（再掲）</h2>
+	
+  <div>
+  	<canvas data-processing-sources="js/schedule.pjs" id="schedule"  width="821" height="371"></canvas>  	
+  </div>  
+</section>
+
+<section class="slide">
+	<h2>後期の活動の予定</h2>
+	<p>ペアプログラミングの学習</p>
+	<p>HTML5 Device APIの学習</p>
+		<ul>
+			<li>iOSではブラウザ経由での画像アップロードができない</li>
+			<li>GPSなど他のデバイスを必要に応じて利用</li>
+		</ul>
+	<p>Ruby on Railsの学習</p>
+		<ul>
+			<li>主にページ遷移機能の学習</li>
+		</ul>
+	<p>仕様検討(引き続き)</p>
+		<ul>
+			<li>通知機能、アップロード機能の詳細を検討</li>
+		</ul>
+	<p>実装</p>
+</section>
+
+<section class="slide">
+	<h2>前期からの学び</h2>
+	<ul>
+		<li>上級生が知識を教える予定だったが、2年生しか集まれないことがあった</li>
+		<ul>→　事前のタスク割り振りなどにより、全員が集合できなくても作業で<br/>　 　きるように改善する</ul>
+		<li>分散バージョン管理システムによって、効率的に共有ファイルを編集できるということがわかった。</li>
+		<li>commitメッセージの書き方を取り決めていなかったため、どう変更したのかわからなかった</li>
+		<ul>→　commitメッセージについて取り決める</ul>
+		<li>拡張のためには、Ruby on Railsの学習が必要とわかったため、学習を行う</li>
+		<ul>→　後期に学習する</ul>
+	</ul>
+</section>
+
+<section class="slide">
+	<h2>まとめ</h2>
+  <h4>活動目的</h4>
+  <ul>
+    <p>スマートフォン向けeポートフォリオシステムの拡張</p>
+    <ul>
+    	<p>→　機能とユーザインタフェース</p>
+    </ul>
+  </ul>
+  <h4>予定している機能</h4>
+  <ul>
+    <li>更新情報の通知機能</li>
+    <li>写真アップロード機能</li>
+  </ul>
+  <h4>前期の活動の成果</h4>
+  <ul>
+    <li>学習(GitHub, SeleniumIDE, HTML5, Ruby)</li>
+    <li>仕様検討</li>
+  </ul>
+  <h4>後期の活動の予定</h4>
+  <ul>
+    <li>学習(ペアプログラミング, HTML5 Device API, Ruby on Rails)</li>
+    <li>開発(仕様、実装）</li>
+  </ul>
+</section>
+
+<!--
+<section class="slide">
+	<h2>対質問ページのメモ</h2>
+	<p>C2dm on Rails (Android Cloud to Device Messaging on Rails)</p>
+	<p>APN on Rails (Apple Push Notifications on Rails)</p>
+	<p>GitHub</p>
+</section>
+-->
+
+<section class="slide">
+	<h2>SeleniumIDE</h2>
+	<p>Firefoxのアドオンで、Seleniumテストケースを作成するためのIDE</p>
+	<p>ユーザの操作を記録し、再利用することが可能</p>
+	<br/>
+		<img src="images/chart_selenium_page.png" width="900px" />
+</section>
+
+<section class="slide">
+<h2>GitHub</h2> 
+<ul>
+	<li>分散型バージョン管理システムをサポートする共有Webサービス</li>
+	<li>オープンソースプロジェクト向けに無料でアカウントを提供している</li>
+</ul>	
+<p>使用するメリット</p>
+	<ul>
+		<li>開発者が複数いるとき、データの共有が簡単</li>
+		<li>複数人で同じデータを同時に編集し、後でマージできる</li>
+    <li>編集ログ（commitメッセージ）が残せるので、建て直しが簡単</li>
+	</ul>
+<!--<img src = "images/github2.png" />-->
+</section>
+
+
+<!--
+<section class="slide">
+	<h2>演習（教育系）方針</h2>
+	<p>スマホに適したUIの開発</p>
+	<ul>
+		<li>狭い画面</li>
+		<li>センサー</li>
+		<li>個人設定</li>
+	</ul>
+	<p>流行・最新技術に触れる</p>
+</section>
+
+<section class="slide">
+	<h2>テーマ</h2>
+	<p>ポートフォリオシステムのスマホ版</p>
+	<p>ポートフォリオプロセス</p>
+	<p>e-ポートフォリオシステム</p>
+</section>
+
+<section class="slide">
+	<h2>演習の目的</h2>
+	<p>UIの勉強</p>
+	<ul>
+		<li>jQuery Mobileの習得</li>
+	</ul>
+	<p>スマホに適した機能を考える</p>
+	<p>XPの一部プラクティスを経験する</p>
+	<ul>
+		<li>TDD(Selenium)</li>
+		<li>ペアプロ</li>
+		<li>分散開発(GitHub)</li>
+	</ul>
+	<p>ポートフォリオを題材として～</p>
+</section>
+
+<section class="slide">
+	<h2>前期の活動内容1</h2>
+	<p>週一、学部2年、学部３年が多いので学習メイン</p>
+	<p>webアプリケーション(HTML5,jQuery Mobile,rails)の学習</p>
+	<ul>
+		<li>JavaScriptのcanvasを利用して学習</li>
+	</ul>
+	<p>アジャイル開発の学習</p>
+	<ul>
+		<li>XPのTDDについて学習</li>
+		<li>様々なプラクティスを知った</li>
+	</ul>
+</section>
+
+<section class="slide">
+	<h2>前期の活動内容2</h2>
+	<p>jQuery Mobileを用いたログイン画面の作成</p>
+	<p>２年生が各自Rubyの勉強会を実施</p>
+	<p>開発環境導入</p>
+	<ul>
+		<li>分散管理(Githubによるバージョン管理)</li>
+		<li>Aptana Studio 3</li>
+		<li>Seleniumによるユニットテスト</li>
+	</ul>
+</section>
+
+<section class="slide">
+	<h2>スケジュール(今後の活動の流れ)未定</h2>
+	<p>デザインの意味でプロトタイプ作成</p>
+	<p>プロダクトと機能を作って検証</p>
+	<br/>
+	<h4>ここにガントチャートの図を載せる</h4>
+	<h4>もしくは箇条書きで・＿＿(９月)のように</h4>
+</section>
+
+<section class="slide">
+	<h2>学び未定</h2>
+	<p>KPT分析の結果</p>
+</section>
+
+<section class="slide">
+	<h2>まとめ</h2>
+	<p>方針</p>
+	<p>活動内容</p>
+	<p>今後のスケジュール</p>
+	<p>学び</p>
+</section>
+-->
+
+<!-- End slides. -->
+
+
+<!-- Begin extension snippets. Add or remove as needed. -->
+
+<!-- deck.navigation snippet -->
+<a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
+<a href="#" class="deck-next-link" title="Next">&#8594;</a>
+
+<!-- deck.status snippet -->
+<p class="deck-status">
+	<span class="deck-status-current"></span>
+	/
+	<span class="deck-status-total"></span>
+</p>
+
+<!-- deck.goto snippet -->
+<form action="." method="get" class="goto-form">
+	<label for="goto-slide">Go to slide:</label>
+	<input type="text" name="slidenum" id="goto-slide" list="goto-datalist">
+	<datalist id="goto-datalist"></datalist>
+	<input type="submit" value="Go">
+</form>
+
+<!-- deck.hash snippet -->
+<a href="." title="Permalink to this slide" class="deck-permalink">#</a>
+
+<!-- End extension snippets. -->
+
+
+<!-- Required JS files. -->
+<script src="jquery-1.7.2.min.js"></script>
+<script src="core/deck.core.js"></script>
+<script src="js/jquery.fn.gantt.js"></script>
+
+<!-- Extension JS files. Add or remove as needed. -->
+
+<script src="core/deck.core.js"></script>
+<script src="extensions/hash/deck.hash.js"></script>
+<script src="extensions/menu/deck.menu.js"></script>
+<script src="extensions/goto/deck.goto.js"></script>
+<script src="extensions/status/deck.status.js"></script>
+<script src="extensions/navigation/deck.navigation.js"></script>
+<script src="extensions/scale/deck.scale.js"></script>
+
+<!-- Initialize the deck. You can put this in an external file if desired. -->
+<script>
+	$(function() {
+		$.deck('.slide');
+    });
+    </script>
+</body>
+</html>
