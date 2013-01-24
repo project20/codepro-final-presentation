@@ -37,7 +37,6 @@
 <section class="slide">
 	<br /><br />
 	<h2 align="center" style="font-size: 2.3em">スマートフォンへの対応に向けた<br />eポートフォリオシステムの拡張</h2>
-	<!--<h4 align="center">with アジャイルソフトウェア開発</h4>-->
 	<br /><br /><br /><br /><br />
 	   <h4>M2 佐藤隆広</h4>
     <h4>M1 秀毛嶺維馬</h4>
@@ -50,14 +49,14 @@
 <section class="slide">
 	<h2>アジェンダ</h2>
 	<ol style="font-size: 1.2em">
-	<li>活動目的</li>
+	<!--<li>活動目的</li>
 	<li>背景：eポートフォリオシステム</li>
 	<li>提案：スマートフォンによる情報共有の促進</li>
 	<li>利用例</li>
 	<li>開発技術、手法</li>
 	<li>スケジュール</li>
 	<li>前期からの学び</li>
-	</ol>
+	</ol>-->
 </section>
 
 <section class="slide">
@@ -109,7 +108,7 @@
 				<ul>
 					<li>スマートフォン向けUI</li>
 					<li>スマートフォン向け機能</li>
-					<li>スマートフォン向けシステムアーキテクチャ</li>
+					<li>PCサービスをスマートフォン向けに対応させるためのシステムアーキテクチャ</li>
 				</ul>
 			</td>
 			<td>&nbsp;</td>
@@ -175,11 +174,8 @@
 	<table>
 	<p>自身のポートフォリオを手軽に確認できる</p>
 	<p>面接の前など、自分の学習成果を振り返る際に用いる</p>
-	<br/><br/>
 	<td>
-<!--		<img src="images/kanpe.jpg" align="left" width="250px"/> -->
-		<img src="images/mensetu.gif" align="right" width="300px"/>
-		<p><font size="1">Copyright 2011 © Nissei co.,ltd. All Rights Reserved.</font></p>
+		<img src="images/mensetu.jpg" align="right" width="300px"/>
 	</table>
 </section>
 
@@ -197,19 +193,6 @@
 </section>
 -->
 
-<section class = "slide">
-	<h2>実装スコープと成果</h2>
-	<p>予定</p>
-</section>
-
-<section class = "slide">
-	<h2>デモ</h2>
-</section>
-
-<section class = "slide">
-	<h2>システム構成図</h2>
-</section>
-
 <section class="slide">
   <h2>開発技術</h2>
   <table>
@@ -222,26 +205,19 @@
     </tr>
     <tr>
     	<td>
-          <p></p>
+          <p>スマホ向けのサーバにはデータベースや認証が不要なので軽量なフレームワーク</p>
         </td>
       <td align="center">→</td>
-      <td>しなとら</td>
+      <td>Sinatra</td>
     </tr>   
    </table>
    <table>
    	<td>
-   	</br>
-   	</br>
-   	</br>
-   		<img src="images/hikaku.gif" width="650px"/>
-   	</td>
-   	<td>
-   		<p>　　</p>
-   	</td>
-   	<td>
-   		<img src="images/login_sample.png" width="250px"/>
-   	</td>
-   </tr>
+   	<br/>
+   	<br/>
+   	<br/>
+   	<img src="images/hikaku.gif" width="650px"/>
+   </td>
   </table>	
 </section>
 
@@ -263,6 +239,19 @@
 			eポートフォリオシステムをSinatraで拡張することで、APIを簡単に使用することを可能にした</br>
 			<img src="images/sinatra_jquery_mobile2.png" alt="" align="top">
 	</p>
+</section>
+
+<section class = "slide">
+	<h2>システム構成図</h2>
+</section>
+
+<section class = "slide">
+	<h2>実装スコープと成果</h2>
+	<p>予定</p>
+</section>
+
+<section class = "slide">
+	<h2>デモ</h2>
 </section>
 
 <section class="slide">
@@ -315,20 +304,25 @@
 	<h2>スケジュール</h2>
 	
   <div>
-  	<canvas data-processing-sources="js/schedule.pjs" id="schedule"  width="821" height="371"></canvas>  	
+  	<img src="images/schedule.png" width="1200px"/> 	
   </div>  
 </section>
 
-<!-- こういうことを確認できた（検証した）というのが今年のプロジェクトの目的でした -->
 <section class="slide">
 	<h2>今年度のプロジェクトの成果</h2>
-  <p>活動目的：eポートフォリオシステムをスマートフォン向けに拡張</p>
+  <p><u>活動目的：eポートフォリオシステムをスマートフォン向けに拡張</u></p>
+  <h4>スマートフォンからポートフォリオを確認するための機能を実装できた</h4>
   <ul>
-    <li>スマートフォンでポートフォリオを見やすく閲覧するための機能を実装できた</li>
-    <ul>＜それによってどういう効果があるかとか＞</ul>
-    <li>e-ポートフォリオシステムで更新された情報を確認する機能を実装できた</li>
-    <ul>＜それによってどういう効果があるかとか＞</ul>
+    <li>就職活動の場面等で、eポートフォリオシステムを生かしやすくなった</li>
+    <ul>
+    	<li>エントリーシート・履歴書作成だけでなく、面接等の場面にも対応できる</li>
+    </ul>
+　</ul>
+　<h4>eポートフォリオシステムで更新された内容をスマートフォンから確認する機能を実装できた</h4>
+  <ul>
+    <li>グループでの活動の情報共有をサポートできる</li>
   </ul>
+  <h4>それぞれの機能をスマートフォン向けのUIで実装できた</h4>
 </section>
 
 <section class="slide">
