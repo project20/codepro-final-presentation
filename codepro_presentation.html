@@ -167,16 +167,14 @@
 
 <section class="slide">
 	<h2>通知機能：更新情報の通知</h2>
-	<p>共有している成果物が変更されると、システムから即時通知をうけられる</p>
-	<p>ユーザストーリー：　共有しているソースコードが書き換えられると、グループメンバーに通知が届く</p>
+	<p>前回ログイン時から次回ログイン時までの間で、グループ内で共有している学習成果物が更新されると、ログイン後のトップページに更新情報が表示される</p>
 	<img src="images/push_chart.png" />
 </section>
 
 <section class="slide">
 	<h2>アップロード機能：写真のアップロード</h2>
 	<table>
-	<p>学習成果物として使いたい写真や動画を、PCを介さずに直接アップロードする</p>
-	<p>ユーザストーリー：　ホワイトボードの写真を議事録に添付する</p>
+	<p>学習成果物として蓄積したい写真や動画を、スマートフォンから直接アップロードする</p>
 	<br/><br/>
 	<td>
 		<img src="images/shot_scene.gif" width="500px"/>
@@ -190,8 +188,8 @@
 <section class="slide">
 	<h2>カンペ機能：ポートフォリオの確認</h2>
 	<table>
-	<p>自身のポートフォリオを手軽に確認できる</p>
-	<p>面接の前など、自分の学習成果を振り返る際に用いる</p>
+	<p>自身のポートフォリオを手軽に確認する</p>
+	<p>面接の前など、自分の学習成果物を振り返る際に用いる</p>
 	<td>
 		<img src="images/mensetu.jpg" align="right" width="300px"/>
 	</table>
@@ -227,11 +225,15 @@
         </td>
       <td align="center">→</td>
       <td>Sinatra</td>
-    </tr>     	
+    </tr>
+    <tr>
+      <td width="50%">
+          <p>スマートフォン向けのUIの実現</p>
+      </td>
+      <td width="10%" align="center" valign="middle">→</td>
+      <td>jQuery Mobile</td>
+    </tr>
    </table>
-      		<h>機能は多いが大掛かりなRailsよりも
-   		軽量でシンプルなSinatraの方が
-   		拡張に向いていると判断した</h>
    <table>
 <br/>
    	<td>
@@ -252,20 +254,10 @@
 </section>
 
 <section class = "slide">
-	<h2>Sinatra と jQuery Mobile</h2>
+	<h2>システムの全体像</h2>
 	<p>
-			拡張する前のeポートフォリオシステムは、Railsで構成されていた</br>
-			Railsで構成されるアプリケーション内でjQuery MobileのAPIを使用することは、困難であった</br>
-			eポートフォリオシステムをSinatraで拡張することで、APIを簡単に使用することを可能にした</br>
-			<img src="images/sinatra_jquery_mobile.png" alt="" align="top">
-	</p>
-</section>
-
-<section class = "slide">
-	<h2>Sinatra と jQuery Mobile</h2>
-	<p>
-			拡張する前のeポートフォリオシステムは、Railsで構成されていた</br>
-			Railsで構成されるアプリケーション内でjQuery MobileのAPIを使用することは、困難であった</br>
+			拡張する前のeポートフォリオシステムは、Ruby on Railsで構成されていた</br>
+			Ruby on Railsで構成されるアプリケーション内でjQuery MobileのAPIを使用することは、困難であった</br>
 			eポートフォリオシステムをSinatraで拡張することで、APIを簡単に使用することを可能にした</br>
 			<img src="images/sinatra_jquery_mobile2.png" alt="" align="top">
 	</p>
