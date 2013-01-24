@@ -113,34 +113,24 @@
 
 <section class="slide">
 	<h2>スマートフォンとPCの違い</h2>
-	<p align=center>スマートフォンとPCの間には違いがあり、使用場面で差が生じている</p>
-	<table border="1" width=1100 align=center>
-	<!--	<tr>
-		<th bgcolor="#dcdcdc">スマートフォン</th>
-  	<th bgcolor="#dcdcdc">   PC    </th> 
-  	 </tr>-->
-  	<tr align=&#x2190;>
-  	<td>	<ul>
-  	<h>インタフェースの違いによる差</h>
-			<li>PCよりもスマートフォンは画面が小さい</li>
+	<p>スマートフォンとPCの間には違いがあり、使用場面で差が生じている</p>
+
+    <h>インタフェースの違いによる差</h>
+    <ul>
+			<li>PCよりもスマートフォンは画面が小さい
 			</br><p>→PCサイトをスマートフォンで開くとレイアウトが崩れることがある<p/>
+      </li>
+    </ul>
 		<h>デバイス的な違いによる差</h>
-			<li>PCと違いスマートフォンはキーボード入力ではない</li>
+    <ul>
+			<li>PCと違いスマートフォンはキーボード入力ではない
 			</br><p>→長文の入力がPCよりも困難である<p/>
-			<li>スマートフォンはPCよりも携帯が容易</li>
-			</br><p>→PCよりもスマートフォンの方が、即時性が高い<p/>						
-			</ul></td>
-  <!--		<td>
-  			<ul>
-			<li>画面が大きい</li>
-			<li>キーボード入力</li>
-			<li>携帯がしにくい</li>
-			<li>常に電源が入っているとはいえない</li>
-				</ul>
-			</td>-->
-  	</tr>
-  </table>
-	
+      </li>
+			<li>スマートフォンはPCよりも携帯が容易
+			</br><p>→PCよりもスマートフォンの方が、即時性が高い<p/>
+      </li>
+		</ul>
+
 	<img src="images/iPhone4.png" height="300px"/>
 </section>
 
@@ -154,12 +144,7 @@
 
 <section class="slide">
 	<h2>通知機能：更新情報の通知</h2>
-<<<<<<< HEAD
 	<p>前回ログイン時から次回ログイン時までの間で、グループ内で共有している学習成果物が更新されると、ログイン後のトップページに更新情報が表示される</p>
-=======
-	<p>共有している成果物が変更されると、システムから通知をうけられる</p>
-	<p>共有しているソースコードが書き換えられると、グループメンバーに通知が届く</p>
->>>>>>> 17caa3f7e832099b58063d01362e2d9cb6318223
 	<img src="images/push_chart.png" />
 </section>
 
@@ -190,8 +175,8 @@
 	<h2>システムの全体図</h2>
 	<p>
 			拡張する前のeポートフォリオシステムは、Ruby on Railsで構成されていた</br>
-			Ruby on Railsで構成されるアプリケーション内でjQuery MobileのAPIを使用することは、困難であった</br>
-			eポートフォリオシステムをSinatraで拡張することで、APIを簡単に使用することを可能にした</br>
+			Ruby on Railsで構成されるアプリケーション内でjQuery Mobileを使用することは、困難であった</br>
+			eポートフォリオシステムをSinatraで拡張することで、jQuery Mobileを簡単に使用することを可能にした</br>
 			<img src="images/sinatra_jquery_mobile.png" alt="" align="top">
 	</p>
 </section>
@@ -200,8 +185,8 @@
 	<h2>システムの全体図</h2>
 	<p>
 			拡張する前のeポートフォリオシステムは、Ruby on Railsで構成されていた</br>
-			Ruby on Railsで構成されるアプリケーション内でjQuery MobileのAPIを使用することは、困難であった</br>
-			eポートフォリオシステムをSinatraで拡張することで、APIを簡単に使用することを可能にした</br>
+			Ruby on Railsで構成されるアプリケーション内でjQuery Mobileを使用することは、困難であった</br>
+			eポートフォリオシステムをSinatraで拡張することで、jQuery Mobileを簡単に使用することを可能にした</br>
 			<img src="images/sinatra_jquery_mobile2.png" alt="" align="top">
 	</p>
 </section>
@@ -210,7 +195,7 @@
   <h2>開発技術</h2>
   <table>
     <tr>
-      <td width="50%">
+      <td width="60%">
           <p>スマートフォン向けのUIの実現</p>
       </td>
       <td width="10%" align="center" valign="middle">→</td>
@@ -218,17 +203,17 @@
     </tr>
     <tr>
     	<td>
-          <p>スマホ向けのサーバにはデータベースや認証が不要なので軽量なフレームワーク</p>
+          <p>スマートフォン向けのサーバにはデータベースや認証が不要なため軽量なフレームワーク</p>
         </td>
       <td align="center">→</td>
       <td>Sinatra</td>
     </tr>
     <tr>
       <td width="50%">
-          <p>スマートフォン向けのUIの実現</p>
+        <p>PC向けのeポートフォリオシステムがRuby on Railsでできていたため</p>
       </td>
       <td width="10%" align="center" valign="middle">→</td>
-      <td>jQuery Mobile</td>
+      <td>Ruby on Rails</td>
     </tr>
    </table>
    <table>
@@ -251,6 +236,7 @@
   </table>	
 </section>
 
+<!--
 <section class="slide">
   <h2>採用した開発手法</h2>
    <table style="border: 0px solid #000">
@@ -289,6 +275,7 @@
     </tr>
    </table>
 </section>
+-->
 
 <section class="slide">
 	<h2>スケジュール</h2>
@@ -376,7 +363,7 @@
       </td>
       <td>
         <ul>
-          <li>Sinatraで構成されるアプリケーション内でAPI(jQuery Mobile)を利用できることを確認</li>
+          <li>Sinatraで構成されるアプリケーション内でjQuery Mobileを利用できることを確認</li>
         </ul>
       </td>
     </tr>
@@ -430,7 +417,8 @@
 
 <section class="slide">
 	<h2>まとめ</h2>
-  <h4>活動目的</h4>
+				<img src="images/checklist.png"/>
+<!--  <h4>活動目的</h4>
   <ul>
     <p>スマートフォン向けeポートフォリオシステムの拡張</p>
     <ul>
@@ -451,7 +439,7 @@
   <ul>
     <li>学習(ペアプログラミング, HTML5 Device API, Ruby on Rails)</li>
     <li>開発(仕様、実装）</li>
-  </ul>
+  </ul>-->
 </section>
 
 <!--
