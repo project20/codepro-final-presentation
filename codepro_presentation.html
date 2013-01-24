@@ -80,12 +80,12 @@
 </section>
 
 <section class="slide">
-	<h2>eポートフォリオシステムの現状</h2>
+	<h2>現状</h2>
 	<table>
 		<td>
-			<p>大学教育では、ポートフォリオを電子化したeポートフォリオシステムが活用されている</p>
+			<p>本学では、ポートフォリオを電子化したeポートフォリオシステムが開発中である</p>
 		  <ul>
-		  	<li>多くのeポートフォリオシステムはPC向けのWebアプリケーションである</li>
+		  	<li>開発中のeポートフォリオシステムはPC向けのWebアプリケーションである</li>
 		  	<li>PCからインターネットを利用できない場面ではポートフォリオを確認できない</li>
 		  	<li>PC向けのアプリケーションであるため、UIや機能が他の端末に適しているとは限らない</li>
 		  </ul>
@@ -139,15 +139,16 @@
 <section class="slide">
 	<h2>スマートフォン向け機能の提案</h2>
 	<table>
-	<td width="70%">
+	<td width="40%">
 	<p>通知機能</p>
-	<p>写真アップロード機能</p>
+	<p>アップロード機能</p>
 	<p>成果物確認機能</p>
 	<p>ポートフォリオ確認機能</p>
-</td>
-<td>
-	<img src="images/eportfolio_smart2.png" width="800px" height="650px"/>
-</td>
+  </td>
+  <td>　　　　　　　</td>
+  <td>
+  	<img src="images/eportfolio_smart2.png" width="400px" height="650px"/>
+  </td>
 </table>
 </section>
 
@@ -186,25 +187,6 @@
 			<img src="images/remaind.png"/>
 </section>
 
-<section class = "slide">
-	<h2>システムの全体図</h2>
-	<p>
-			拡張する前のeポートフォリオシステムは、Ruby on Railsで構成されていた</br>
-			Ruby on Railsで構成されるアプリケーション内でjQuery Mobileを使用することは、困難であった</br>
-	 　  </br>
-			<img src="images/sinatra_jquery_mobile.png" alt="" align="top">
-	</p>
-</section>
-
-<section class = "slide">
-	<h2>システムの全体図</h2>
-	<p>
-			eポートフォリオシステムをSinatraで拡張することで、jQuery Mobileを簡単に使用することを可能にした</br>
-		</br>
-			<img src="images/sinatra_jquery_mobile2.png" alt="" align="top">
-	</p>
-</section>
-
 <section class="slide">
   <h2>開発技術</h2>
   <table>
@@ -216,7 +198,7 @@
       <td>jQuery Mobile</td>
     </tr>
     <tr>
-    	<td>
+      <td>
           <p>スマートフォン向けのサーバにはデータベースや認証が不要なため軽量なフレームワーク</p>
         </td>
       <td align="center">→</td>
@@ -232,25 +214,43 @@
    </table>
    <table>
 <br/>
-   	<td>
-   	<br/><br/>
+    <td>
+    <br/><br/>
 
-   		<img src="images/hikaku.gif" width="650px"/>
-   	</td>
-   	<td><p>　　　　</p></td>
-   	<td>
-   		<img src="images/login_sample.png" width="250px"/>
-   	</td>
+      <img src="images/hikaku.gif" width="650px"/>
+    </td>
+    <td><p>　　　　</p></td>
+    <td>
+      <img src="images/login_sample.png" width="250px"/>
+    </td>
    </tr>
 
 
-   	<br/>
+    <br/>
 
    </td>
-  </table>	
+  </table>  
 </section>
 
-<!--
+<section class = "slide">
+	<h2>不採用案</h2>
+	<p>
+			拡張する前のeポートフォリオシステムは、Ruby on Railsで構成されていた</br>
+			Ruby on Railsで構成されるアプリケーション内でjQuery Mobileを使用することは、困難であった</br>
+	 　  </br>
+			<img src="images/sinatra_jquery_mobile.png" alt="" align="top">
+	</p>
+</section>
+
+<section class = "slide">
+	<h2>採用案</h2>
+	<p>
+			eポートフォリオシステムをSinatraで拡張することで、jQuery Mobileを簡単に使用することを可能となった</br>
+		</br>
+			<img src="images/sinatra_jquery_mobile2.png" alt="" align="top">
+	</p>
+</section>
+
 <section class="slide">
   <h2>採用した開発手法</h2>
    <table style="border: 0px solid #000">
@@ -288,8 +288,35 @@
       </td>
     </tr>
    </table>
+   <hr style="margin: 0px; color: #000;" size="5"/>
+   <table style="border: 0px solid #000">
+    <tr>
+      <td width="10%">
+          <p>見積り</p>
+        </td>
+      <td width="5%" align="center" valign="middle">→</td>
+      <td width="40%">
+        <ul>
+        <li>バーンダウンチャート
+          <ul>
+            <li>タスクの見える化</li>
+          </ul>
+        </li>
+        <li>ユーザーストーリーの作成
+          <ul>
+            <li>実装すべきタスクの明確化</li>
+          </ul>
+        </li>
+        <li>ストーリーポイント
+          <ul>
+            <li>ユーザーストーリーごとのコスト比率の明確化</li>
+          </ul>
+        </li>
+        </ul>
+      </td>
+    </tr>
+   </table>
 </section>
--->
 
 <section class="slide">
 	<h2>スケジュール</h2>
