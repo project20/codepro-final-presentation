@@ -16,6 +16,9 @@
 .deck-container .slide h3 {
   color: #888;
 }
+.deck-container .slide hoge {
+  font-size: 1.4rem;
+}
 .deck-container .slide pre {
   border-color: #ccc;
 }
