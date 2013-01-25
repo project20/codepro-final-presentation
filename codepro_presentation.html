@@ -164,6 +164,7 @@
 <section class="slide">
 	<h2>通知機能</h2>
 	<p>前回ログイン時から次回ログイン時までの間で、グループ内で共有している学習成果物が更新されると、ログイン後のトップページに更新情報が表示される</p>
+	<ul>更新された成果物を把握しなければ、整理がつかなくなるため</ul>
 	<img src="images/push_chart.png" />
 </section>
 
@@ -171,6 +172,7 @@
 	<h2>アップロード機能</h2>
 	<table>
 	<p>学習成果物として蓄積したい写真や動画を、スマートフォンから直接アップロードする</p>
+	<ul>カメラで撮ったものを直接アップロードすることが可能なら手間が少ないため</ul>
 	<br/><br/>
 	<td>
 		<img src="images/shot_scene.gif" width="500px"/>
@@ -184,16 +186,38 @@
 <section class="slide">
   <h2>成果物確認機能</h2>
   <p>eポートフォリオシステムに蓄積した成果物を確認する</p>
-  <p>蓄積した学習成果物を確認する際に用いる</p>
+<!--  <p>蓄積した学習成果物を確認する際に用いる</p>-->
+  <ul>  成果物の蓄積情報を手軽に確認するため<ul>
 </section>
 
 <section class="slide">
 	<h2>ポートフォリオ確認機能</h2>
 	<table>
 	<p>自身のポートフォリオを手軽に確認する</p>
-	<p>面接の前など、自分の学習成果物を振り返る際に用いる</p>
+	<ul>自分の学習成果の振り返りを手軽にするため
+	<ul>面接の前など、自分の学習成果物を振り返る際に用いる</ul>
+	</ul>
 	</table>
 			<img src="images/remaind.png"/>
+</section>
+
+<section class = "slide">
+	<h2>システムの全体図（当初の予定）</h2>
+	<p>
+			拡張する前のeポートフォリオシステムは、Ruby on Railsで構成されていた</br>
+			Ruby on Railsで構成されるアプリケーション内でjQuery Mobileを使用することは、困難であった</br>
+	 　  </br>
+			<img src="images/sinatra_jquery_mobile.png" alt="" align="top">
+	</p>
+</section>
+
+<section class = "slide">
+	<h2>システムの全体図（変更後・決定版）</h2>
+	<p>
+			eポートフォリオシステムをSinatraで拡張することで、jQuery Mobileを簡単に使用することを可能にした</br>
+		</br>
+			<img src="images/sinatra_jquery_mobile2.png" alt="" align="top">
+	</p>
 </section>
 
 <section class="slide">
@@ -235,25 +259,6 @@
     <br/>
    </td>
   </table>  
-</section>
-
-<section class = "slide">
-	<h2>システムの全体図（当初の予定）</h2>
-	<p>
-			拡張する前のeポートフォリオシステムは、Ruby on Railsで構成されていた</br>
-			Ruby on Railsで構成されるアプリケーション内でjQuery Mobileを使用することは、困難であった</br>
-	 　  </br>
-			<img src="images/sinatra_jquery_mobile.png" alt="" align="top">
-	</p>
-</section>
-
-<section class = "slide">
-	<h2>システムの全体図（変更後・決定版）</h2>
-	<p>
-			eポートフォリオシステムをSinatraで拡張することで、jQuery Mobileを簡単に使用することを可能にした</br>
-		</br>
-			<img src="images/sinatra_jquery_mobile2.png" alt="" align="top">
-	</p>
 </section>
 
 <section class = "slide">
@@ -342,7 +347,7 @@
   <ul>
     <li>スマートフォンからポートフォリオを確認するための機能の実装</li>
     <li>成果物確認機能の実装</li>
-　   <li>eポートフォリオシステムで更新された内容をスマートフォンから確認する機能の実装</li>
+　      <li>eポートフォリオシステムで更新された内容をスマートフォンから確認する機能の実装</li>
     <li>それぞれの機能をスマートフォン向けのUIで実装</li>
     <li>スマートフォン向けのシステムアーキテクチャの検討</li>
   </ul>
@@ -360,7 +365,7 @@
 
 <section class="slide">
   <h2>演習を通して習得した技術</h2>
-  <p>環境構築：GitHub, Sinatra, Ruby on Rails</p>
+  <p>開発環境の構築：GitHub, Sinatra, Ruby on Rails</p>
   <p>バージョン管理システムの学習</p>
   <p>Rubyの学習</p>
   <p>Webアプリケーションフレームワークの学習</p>
